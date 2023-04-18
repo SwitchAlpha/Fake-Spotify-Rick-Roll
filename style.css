@@ -1,0 +1,79 @@
+
+body {
+  text-align: center;
+  padding: 8rem 3rem;
+  background-color: #191414;
+}
+
+button {
+  background-color: #1DB954;
+  position: relative;
+  height: 50px;
+  width: 200px;
+  background-image: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all ease-out 0.5s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button.active {
+  transition-delay: 1s;
+  width: 10px;
+}
+
+button.loading {
+  border-radius: 50px;
+  width: 50px;
+  font-size: 0px;
+}
+
+.spinner {
+  display: block;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 8px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background: transparent;
+  box-sizing: border-box;
+  border-top: 4px solid white;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-radius: 100%;
+  animation-delay: 0.5s;
+  animation: spin 0.6s ease-out infinite;
+  transition: all ease 0.5s;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Center the div container on mobile devices */
+@media (max-width: 767px) {
+  div {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
